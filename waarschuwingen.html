@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waarschuwingssignalen</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #4c88c8 0%, #5a9bd5 100%);
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .time {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .status-icons {
+            display: flex;
+        }
+        
+        .status-icon {
+            margin-left: 10px;
+            font-size: 20px;
+        }
+        
+        .page-title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        
+        .content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-y: auto;
+        }
+        
+        .card {
+            width: 90%;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .card-header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .warning-section {
+            margin-bottom: 25px;
+        }
+        
+        .warning-title {
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #ffcc00;
+            display: flex;
+            align-items: center;
+        }
+        
+        .warning-icon {
+            margin-right: 10px;
+            font-size: 24px;
+        }
+        
+        .warning-item {
+            margin-bottom: 12px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            padding: 12px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .warning-bullet {
+            color: #ffcc00;
+            margin-right: 10px;
+            font-size: 18px;
+        }
+        
+        .warning-text {
+            flex: 1;
+        }
+        
+        .back-button {
+            background-color: rgba(255, 255, 255, 0.3);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            text-decoration: none;
+        }
+        
+        .navigation-bar {
+            display: flex;
+            justify-content: space-around;
+            background-color: black;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+        
+        .nav-button {
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="time" id="current-time">10:26</div>
+        <div class="status-icons">
+            <div class="status-icon">🔕</div>
+            <div class="status-icon">📶</div>
+            <div class="status-icon">📱</div>
+            <div class="status-icon">🔋</div>
+        </div>
+    </div>
+    
+    <div class="page-title">Waarschuwingssignalen</div>
+    
+    <div class="content">
+        <div class="card">
+            <div class="card-header">
+                Signalen om alert op te zijn
+            </div>
+            
+            <div class="warning-section">
+                <div class="warning-title">
+                    <span class="warning-icon">⚠️</span>
+                    Veranderingen in levensstijl
+                </div>
+                <div class="warning-item">
+                    <span class="warning-bullet">•</span>
+                    <div class="warning-text">Let op veranderingen in uw dagelijkse routines</div>
+                </div>
+                <div class="warning-item">
+                    <span class="warning-bullet">•</span>
+                    <div class="warning-text">Afwijkingen van uw normale slaappatroon</div>
+                </div>
+                <div class="warning-item">
+                    <span class="warning-bullet">•</span>
+                    <div class="warning-text">Verminderde aandacht voor persoonlijke verzorging</div>
+                </div>
+            </div>
+            
+            <div class="warning-section">
+                <div class="warning-title">
+                    <span class="warning-icon">⚠️</span>
+                    Verplichtingen en ontspanning
+                </div>
+                <div class="warning-item">
+                    <span class="warning-bullet">•</span>
+                    <div class="warning-text">Verplichtingen niet stellen</div>
+                </div>
+                <div class="warning-item">
+                    <span class="warning-bullet">•</span>
+                    <div class="warning-text">Onvoldoende ontspanning inbouwen</div>
+                </div>
+                <div class="warning-item">
+                    <span class="warning-bullet">•</span>
+                    <div class="warning-text">Veranderingen in contact met ondersteunend netwerk</div>
+                </div>
+            </div>
+            
+            <div class="warning-section">
+                <div class="warning-title">
+                    <span class="warning-icon">⚠️</span>
+                    HALT!
+                </div>
+                <div class="warning-item">
+                    <span class="warning-bullet">H</span>
+                    <div class="warning-text"><strong>Hunger:</strong> honger, dorst, verlangen</div>
+                </div>
+                <div class="warning-item">
+                    <span class="warning-bullet">A</span>
+                    <div class="warning-text"><strong>Anger:</strong> frustratie, kwaadheid, spanning</div>
+                </div>
+                <div class="warning-item">
+                    <span class="warning-bullet">L</span>
+                    <div class="warning-text"><strong>Loneliness:</strong> alleen zijn, alleen voelen, eenzaamheid</div>
+                </div>
+                <div class="warning-item">
+                    <span class="warning-bullet">T</span>
+                    <div class="warning-text"><strong>Tiredness:</strong> lichamelijke en/of psychische vermoeidheid</div>
+                </div>
+            </div>
+        </div>
+        
+        <a href="risico.html" class="back-button">Bekijk risicosituaties</a>
+        <a href="index.html" class="back-button">Terug naar hoofdmenu</a>
+    </div>
+    
+    <div class="navigation-bar">
+        <a href="index.html" class="nav-button">◀</a>
+        <a href="index.html" class="nav-button">○</a>
+        <a href="#" class="nav-button">□</a>
+    </div>
+
+    <script>
+        // Update time
+        function updateTime() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            document.getElementById('current-time').textContent = `${hours}:${minutes}`;
+        }
+        
+        updateTime();
+        setInterval(updateTime, 60000);
+    </script>
+</body>
+</html>

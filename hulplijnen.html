@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hulplijnen</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #4c88c8 0%, #5a9bd5 100%);
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .time {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .status-icons {
+            display: flex;
+        }
+        
+        .status-icon {
+            margin-left: 10px;
+            font-size: 20px;
+        }
+        
+        .page-title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        
+        .content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .card {
+            width: 90%;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .card-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: white;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 10px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+        }
+        
+        .contact-icon {
+            margin-right: 15px;
+            font-size: 24px;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .contact-number {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .call-button {
+            background-color: rgba(255, 255, 255, 0.3);
+            border: none;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        
+        .add-button {
+            background-color: rgba(255, 255, 255, 0.3);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 200px;
+        }
+        
+        .add-icon {
+            margin-right: 10px;
+        }
+        
+        .back-button {
+            background-color: rgba(255, 255, 255, 0.3);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            text-decoration: none;
+        }
+        
+        .navigation-bar {
+            display: flex;
+            justify-content: space-around;
+            background-color: black;
+            padding: 15px 0;
+        }
+        
+        .nav-button {
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="time" id="current-time">10:26</div>
+        <div class="status-icons">
+            <div class="status-icon">🔕</div>
+            <div class="status-icon">📶</div>
+            <div class="status-icon">📱</div>
+            <div class="status-icon">🔋</div>
+        </div>
+    </div>
+    
+    <div class="page-title">Hulplijnen</div>
+    
+    <div class="content">
+        <div class="card">
+            <div class="card-title">Belangrijke Contacten</div>
+            
+            <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <div class="contact-info">
+                    <div class="contact-name">KVO</div>
+                    <div class="contact-number">03/ 760 07 65</div>
+                </div>
+                <button class="call-button">Bellen</button>
+            </div>
+            
+            <div class="contact-item">
+                <div class="contact-icon">👨‍⚕️</div>
+                <div class="contact-info">
+                    <div class="contact-name">Behandelaar</div>
+                    <div class="contact-number">Voeg nummer toe</div>
+                </div>
+                <button class="call-button">Bellen</button>
+            </div>
+            
+            <div class="contact-item">
+                <div class="contact-icon">👪</div>
+                <div class="contact-info">
+                    <div class="contact-name">Vertrouwenspersoon</div>
+                    <div class="contact-number">Voeg nummer toe</div>
+                </div>
+                <button class="call-button">Bellen</button>
+            </div>
+            
+            <button class="add-button">
+                <span class="add-icon">➕</span> Contact toevoegen
+            </button>
+        </div>
+        
+        <a href="index.html" class="back-button">Terug naar hoofdmenu</a>
+    </div>
+    
+    <div class="navigation-bar">
+        <a href="index.html" class="nav-button">◀</a>
+        <a href="index.html" class="nav-button">○</a>
+        <a href="#" class="nav-button">□</a>
+    </div>
+
+    <script>
+        // Update time
+        function updateTime() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            document.getElementById('current-time').textContent = `${hours}:${minutes}`;
+        }
+        
+        updateTime();
+        setInterval(updateTime, 60000);
+    </script>
+</body>
+</html>

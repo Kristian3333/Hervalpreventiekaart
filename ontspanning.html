@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ontspanning</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #4c88c8 0%, #5a9bd5 100%);
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .time {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .status-icons {
+            display: flex;
+        }
+        
+        .status-icon {
+            margin-left: 10px;
+            font-size: 20px;
+        }
+        
+        .page-title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        
+        .content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .card {
+            width: 90%;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .card-header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .activities-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .activity-row {
+            display: flex;
+            align-items: center;
+        }
+        
+        .activity-input {
+            flex: 1;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+            padding: 12px;
+            color: white;
+        }
+        
+        .activity-input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .activity-checkbox {
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        
+        .add-button {
+            background-color: rgba(255, 255, 255, 0.3);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        
+        .add-icon {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+        
+        .save-button {
+            background-color: rgba(255, 255, 255, 0.3);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: 20px;
+            width: 100%;
+            font-size: 16px;
+        }
+        
+        .back-button {
+            background-color: rgba(255, 255, 255, 0.3);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            text-decoration: none;
+        }
+        
+        .navigation-bar {
+            display: flex;
+            justify-content: space-around;
+            background-color: black;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+        
+        .nav-button {
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="time" id="current-time">10:26</div>
+        <div class="status-icons">
+            <div class="status-icon">🔕</div>
+            <div class="status-icon">📶</div>
+            <div class="status-icon">📱</div>
+            <div class="status-icon">🔋</div>
+        </div>
+    </div>
+    
+    <div class="page-title">Ontspanning</div>
+    
+    <div class="content">
+        <div class="card">
+            <div class="card-header">
+                Dingen die ik graag doe
+            </div>
+            
+            <div class="activities-container">
+                <div class="activity-row">
+                    <div class="activity-checkbox"></div>
+                    <input type="text" class="activity-input" placeholder="Voer een activiteit in...">
+                </div>
+                
+                <div class="activity-row">
+                    <div class="activity-checkbox"></div>
+                    <input type="text" class="activity-input" placeholder="Voer een activiteit in...">
+                </div>
+                
+                <div class="activity-row">
+                    <div class="activity-checkbox"></div>
+                    <input type="text" class="activity-input" placeholder="Voer een activiteit in...">
+                </div>
+                
+                <div class="activity-row">
+                    <div class="activity-checkbox"></div>
+                    <input type="text" class="activity-input" placeholder="Voer een activiteit in...">
+                </div>
+                
+                <div class="activity-row">
+                    <div class="activity-checkbox"></div>
+                    <input type="text" class="activity-input" placeholder="Voer een activiteit in...">
+                </div>
+            </div>
+            
+            <button class="add-button">
+                <span class="add-icon">+</span>Nieuwe activiteit toevoegen
+            </button>
+            
+            <button class="save-button">Opslaan</button>
+        </div>
+        
+        <a href="index.html" class="back-button">Terug naar hoofdmenu</a>
+    </div>
+    
+    <div class="navigation-bar">
+        <a href="index.html" class="nav-button">◀</a>
+        <a href="index.html" class="nav-button">○</a>
+        <a href="#" class="nav-button">□</a>
+    </div>
+
+    <script>
+        // Update time
+        function updateTime() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            document.getElementById('current-time').textContent = `${hours}:${minutes}`;
+        }
+        
+        updateTime();
+        setInterval(updateTime, 60000);
+        
+        // Toggle checkbox
+        document.querySelectorAll('.activity-checkbox').forEach(checkbox => {
+            checkbox.addEventListener('click', function() {
+                this.style.backgroundColor = this.style.backgroundColor === 'white' ? 'rgba(255, 255, 255, 0.1)' : 'white';
+            });
+        });
+    </script>
+</body>
+</html>

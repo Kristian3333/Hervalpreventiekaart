@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hervalpreventie Technieken</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #4c88c8 0%, #5a9bd5 100%);
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .time {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .status-icons {
+            display: flex;
+        }
+        
+        .status-icon {
+            margin-left: 10px;
+            font-size: 20px;
+        }
+        
+        .page-title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        
+        .content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-y: auto;
+        }
+        
+        .card {
+            width: 90%;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .card-header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .technique-item {
+            margin-bottom: 20px;
+        }
+        
+        .technique-label {
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .technique-icon {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        
+        .input-field {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+            padding: 12px;
+            color: white;
+            width: 100%;
+        }
+        
+        .input-field::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .save-button {
+            background-color: rgba(255, 255, 255, 0.3);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: 20px;
+            width: 100%;
+            font-size: 16px;
+        }
+        
+        .back-button {
+            background-color: rgba(255, 255, 255, 0.3);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            text-decoration: none;
+        }
+        
+        .navigation-bar {
+            display: flex;
+            justify-content: space-around;
+            background-color: black;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+        
+        .nav-button {
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="time" id="current-time">10:26</div>
+        <div class="status-icons">
+            <div class="status-icon">🔕</div>
+            <div class="status-icon">📶</div>
+            <div class="status-icon">📱</div>
+            <div class="status-icon">🔋</div>
+        </div>
+    </div>
+    
+    <div class="page-title">Hervalpreventie Technieken</div>
+    
+    <div class="content">
+        <div class="card">
+            <div class="card-header">
+                Mijn persoonlijke technieken
+            </div>
+            
+            <div class="technique-item">
+                <div class="technique-label">
+                    <span class="technique-icon">🛡️</span>
+                    Mijn beschermingsfactoren:
+                </div>
+                <input type="text" class="input-field" placeholder="Wat beschermt u tegen herval...">
+            </div>
+            
+            <div class="technique-item">
+                <div class="technique-label">
+                    <span class="technique-icon">🎯</span>
+                    Ik focus me op mijn grootste voordeel van niet-gebruik / grootste nadeel van gebruik:
+                </div>
+                <input type="text" class="input-field" placeholder="Uw focus...">
+            </div>
+            
+            <div class="technique-item">
+                <div class="technique-label">
+                    <span class="technique-icon">🧠</span>
+                    Ik buig mijn gedachten om:
+                </div>
+                <input type="text" class="input-field" placeholder="Hoe herformuleert u negatieve gedachten...">
+            </div>
+            
+            <div class="technique-item">
+                <div class="technique-label">
+                    <span class="technique-icon">🌊</span>
+                    Ik ga mee met de golf:
+                </div>
+                <input type="text" class="input-field" placeholder="Hoe gaat u om met verlangens...">
+            </div>
+            
+            <div class="technique-item">
+                <div class="technique-label">
+                    <span class="technique-icon">🔄</span>
+                    Ik doe iets anders:
+                </div>
+                <input type="text" class="input-field" placeholder="Welke alternatieve activiteiten helpen u...">
+            </div>
+            
+            <div class="technique-item">
+                <div class="technique-label">
+                    <span class="technique-icon">⛔</span>
+                    Ik vermijd:
+                </div>
+                <input type="text" class="input-field" placeholder="Wat of wie vermijdt u...">
+            </div>
+            
+            <div class="technique-item">
+                <div class="technique-label">
+                    <span class="technique-icon">📞</span>
+                    Ik neem contact op met:
+                </div>
+                <input type="text" class="input-field" placeholder="Wie belt u in moeilijke momenten...">
+            </div>
+            
+            <button class="save-button">Opslaan</button>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                Als ik een uitschuiver maak of blijf gebruiken
+            </div>
+            
+            <div class="technique-item">
+                <div class="technique-label">
+                    <span class="technique-icon">⚠️</span>
+                    Als ik een uitschuiver maak dan:
+                </div>
+                <input type="text" class="input-field" placeholder="Wat doet u als u eenmalig gebruikt...">
+            </div>
+            
+            <div class="technique-item">
+                <div class="technique-label">
+                    <span class="technique-icon">🚨</span>
+                    Als ik blijf gebruiken dan:
+                </div>
+                <input type="text" class="input-field" placeholder="Wat doet u als u blijft gebruiken...">
+            </div>
+            
+            <button class="save-button">Opslaan</button>
+        </div>
+        
+        <a href="index.html" class="back-button">Terug naar hoofdmenu</a>
+    </div>
+    
+    <div class="navigation-bar">
+        <a href="index.html" class="nav-button">◀</a>
+        <a href="index.html" class="nav-button">○</a>
+        <a href="#" class="nav-button">□</a>
+    </div>
+
+    <script>
+        // Update time
+        function updateTime() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            document.getElementById('current-time').textContent = `${hours}:${minutes}`;
+        }
+        
+        updateTime();
+        setInterval(updateTime, 60000);
+    </script>
+</body>
+</html>
